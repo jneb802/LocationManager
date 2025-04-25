@@ -391,7 +391,7 @@ public static class PrefabManager
 			int count = bundleLoader.m_assetIDToLoaderIndex.Count;
 			if (count >= bundleLoader.m_assetLoaders.Length)
 			{
-				Array.Resize(ref bundleLoader.m_assetLoaders, count + 1);
+				Array.Resize(ref bundleLoader.m_assetLoaders, count + registeredLocations.Count);
 			}
 
 			bundleLoader.m_assetLoaders[count] = loader;
